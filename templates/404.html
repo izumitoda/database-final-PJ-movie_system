@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>404</title>
+<link href="/static/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href="/static/css/styleindex.css" rel="stylesheet" type="text/css" media="all" />
+<!-- Custom Theme files -->
+<script src="/static/js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--webfont-->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<!-- header-section-starts -->
+	<div class="full">
+			<div class="menu">
+				<ul>
+					<li><a href="index"><div class="hm"><i class="home1"></i><i class="home2"></i></div></a></li>
+					<li><a class="active" href="movie"><div class="video"><i class="videos"></i><i class="videos1"></i></div></a></li>
+					<li><a href="user"><div class="cat"><i class="watching"></i><i class="watching1"></i></div></a></li>
+				</ul>
+			</div>
+		<div class="main">
+		<div class="error-content">
+			<div class="top-header span_top">
+				<div class="logo">
+					<a href="index"><img src="/static/images/logo.png" alt="" /></a>
+					<p>Movie Theater</p>
+				</div>
+				<div class="search v-search">
+					<input id="searchinfo" type="text" value="搜索" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '搜索';}"/>
+					    <a id="search"  ><input onclick="jump()" type="button" value=""></a>
+					<script>
+	                 function jump()
+	                 {
+						var a=document.getElementById("searchinfo").value;
+						var cc="search-"+a;
+						document.getElementById("search").href=cc;
+     				}
+				</script>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="error-404 text-center">
+				<h2 style="font-size:60px">抱歉，该影片还未录入数据库</h2>
+				<br>
+				<br>
+				<a class="b-home" href="index">返回首页</a>
+			</div>	
+	<div class="footer">
+		<h6>Disclaimer : </h6>
+		<p class="claim">This is a freebies and not an official website, I have no intention of disclose any movie, brand, news.My goal here is to train or excercise my skill and share this freebies.</p>
+		<a href="example@mail.com">example@mail.com</a>
+		<div class="copyright">
+			<p>Copyright &copy; 2015.Company name All rights reserved.<a target="_blank" href="http://www.cssmoban.com/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a> - More Templates <a href="http://www.cssmoban.com/" target="_blank" title="手机网站模板">手机网站模板</a> </p>
+		</div>
+	</div>
+	</div>
+	<div class="clearfix"></div>
+	</div>
+</body>
+</html>

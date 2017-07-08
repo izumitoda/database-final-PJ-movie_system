@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>首页</title>
+<link href="/static/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href="/static/css/styleindex.css" rel="stylesheet" type="text/css" media="all" />
+<!-- Custom Theme files -->
+<script src="/static/js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Cinema Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--webfont-->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+<body >
+	<!-- header-section-starts -->
+	<div class="full">
+			<div class="menu">
+				<ul>
+					<li><a class="active" href="index"><i class="home"></i></a></li>
+					<li><a href="movie"><div class="video"><i class="videos"></i><i class="videos1"></i></div></a></li>
+					<li><a href="user"><div class="cat"><i class="watching"></i><i class="watching1"></i></div></a></li>
+				</ul>
+			</div>
+		<div class="main">
+		<div class="header">
+			<div class="top-header" style="background-color:white;opacity:0.93">
+				<div class="logo">
+					<a href="index"><img src="/static/images/logo.png" alt="" /></a>
+					<p>Movie Theater</p>
+				</div>
+				<div class="search">
+
+						<input id="searchinfo" type="text" value="搜索" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '搜索';}"/>
+					    <a id="search"  ><input onclick="jump()" type="button" value=""></a>
+					<script>
+	                 function jump()
+	                 {
+						var a=document.getElementById("searchinfo").value;
+						var cc="search-"+a;
+						document.getElementById("search").href=cc;
+     				}
+
+				</script>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="header-info">
+				<h1>重庆森林</h1>
+				<p class="review" style="font-weight:700;font-size:16px">导演:王家卫</p>
+				<p class="review" style="font-weight:700;font-size:16px">豆瓣评分:8.6/10</p>
+				<p class="review" style="font-weight:700;font-size:16px">类型:剧情/爱情</p>
+				<p class="review" style="font-weight:700;font-size:16px">主演:林青霞/金城武/梁朝伟/王菲/周嘉玲</p>
+				<p class="special">编号为223的警察（金城武）失恋后患上失恋综合症，在与金发女杀手（林青霞）擦肩而过又离奇相遇并有了一晚温情。快餐店新来的女招待阿菲（王菲）爱上了时常光顾快餐店的编号为633的警察（梁朝伟），偷拿到他的钥匙趁他不在时常潜入他家，一边梦游一边悄悄地改变他的生活，终在被他撞见时令其感受到情感的回归。然而，这才是他们爱情的开始。</p>
+				<a class="video" href="movie-18"><i class="video1"></i>想看/看过</a>
+			</div>
+		</div>
+		<div class="review-slider">
+			 <ul id="flexiselDemo1">
+				 <li><a href="movie-11"><img src="/static/images/11.jpg"  alt=""/></a></li>
+			<li><a href="movie-12"><img src="/static/images/12.jpg"  alt=""/></a></li>
+			<li><a href="movie-13"><img src="/static/images/13.jpg"  alt=""/></a></li>
+			<li><a href="movie-14"><img src="/static/images/14.jpg"  alt=""/></a></li>
+			<li><a href="movie-15"><img src="/static/images/15.jpg"  alt=""/></a></li>
+			<li><a href="movie-16"><img src="/static/images/16.jpg"  alt=""/></a></li>
+		</ul>
+         <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >免费模板</a></div>
+			<script type="text/javascript">
+		$(window).load(function() {
+			
+		  $("#flexiselDemo1").flexisel({
+				visibleItems: 6,
+				animationSpeed: 1000,
+				autoPlay: true,
+				autoPlaySpeed: 3000,    		
+				pauseOnHover: false,
+				enableResponsiveBreakpoints: true,
+				responsiveBreakpoints: { 
+					portrait: { 
+						changePoint:480,
+						visibleItems: 2
+					}, 
+					landscape: { 
+						changePoint:640,
+						visibleItems: 3
+					},
+					tablet: { 
+						changePoint:768,
+						visibleItems: 4
+					}
+				}
+			});
+			});
+		</script>
+		<script type="text/javascript" src="/static/js/jquery.flexisel.js"></script>
+		</div>
+		<div class="video">
+			
+		</div>
+			<div class="footer">
+		<h6>Contact me </h6>
+		<p class="claim">15307130334@fudan.edu.cn</p>
+		<div class="copyright">
+			<p>Copyright &copy; 2017.Lily Young All rights reserved. </p>
+		</div>
+	</div>
+	</div>
+	</div>
+	<div class="clearfix"></div>
+</body>
+</html>

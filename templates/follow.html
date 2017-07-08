@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>我的主页</title>
+<link href="/static/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="/static/css/styleindex.css" rel="stylesheet" type="text/css" media="all" />
+<script src="/static/js/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--webfont-->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<!-- header-section-starts -->
+	<div class="full">
+			<div class="menu">
+				<ul>
+					<li><a href="index"><div class="hm"><i class="home1"></i><i class="home2"></i></div></a></li>
+					<li><a  href="movie"><div class="video"><i class="videos"></i><i class="videos1"></i></div></a></li>
+					<li><a class="active" href="user"><div class="cat"><i class="watching"></i><i class="watching1"></i></div></a></li>
+				</ul>
+			</div>
+		<div class="main">
+		<div class="review-content">
+
+			<div class="top-header span_top">
+				<div class="logo">
+					<a href="index"><img src="/static/images/logo.png" alt="" /></a>
+					<p>Movie Theater</p>
+				</div>
+				<div class="search v-search">
+					<input id="searchinfo" type="text" value="搜索" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '搜索';}"/>
+					    <a id="search"  ><input onclick="jump()" type="button" value=""></a>
+					<script>
+	                 function jump()
+	                 {
+						var a=document.getElementById("searchinfo").value;
+						var cc="search-"+a;
+						document.getElementById("search").href=cc;
+     				}
+				</script>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+            <div class="col-md-3 side-bar">
+                <h1>&nbsp;&nbsp;我关注的用户<a name="del" href="logout">
+				</h1>
+				<div class="featured">
+							<ul>
+                                {% if have==1 %}
+                                {% for a in result %}
+								<li >
+									<a href="user-{{a[1]}}" style="font-size:30px;">{{a[1]}}<a  href="can-{{session['username']}}-{{a[1]}}"><input type="button"  style="border:none;background:white;color:orangered;font-weight:400;font-size:14px;width:5.5em;padding:0;margin-top:-0.5em;vertical-align:middle ;" value="互相关注"/></a></a>
+                                    <p style="font-size:16px;color:grey;margin-top:0;">{{a[3]}}</p>
+								</li>
+								{% endfor %}
+								{% for a in fo %}
+								<li >
+									<a href="user-{{a[1]}}" style="font-size:30px;">{{a[1]}}<a  href="can-{{session['username']}}-{{a[1]}}"><input type="button"  style="background:white;color:orangered;font-weight:400;border:none;font-size:14px;width:5em;padding:0;margin-top:-0.5em;vertical-align:middle ;" value="已关注"/></a></a>
+                                    <p style="font-size:16px;color:grey;margin-top:0;">{{a[3]}}</p>
+								</li>
+								{% endfor %}
+								{% endif %}
+								{% if have==4 %}
+								<li >
+									<a href="user-1" style="font-size:30px;"></a>
+                                    <p style="font-size:16px;color:grey;margin-top:0;">您还未关注任何用户</p>
+								</li>
+                                {% endif %}
+								{% if have==2 %}
+								{% for a in fo %}
+								<li >
+									<a href="user-{{a[1]}}" style="font-size:30px;">{{a[1]}}<a  href="can-{{session['username']}}-{{a[1]}}"><input type="button"  style="background:white;color:orangered;font-weight:400;border:none;font-size:14px;width:5em;padding:0;margin-top:-0.5em;vertical-align:middle ;" value="已关注"/></a></a>
+                                    <p style="font-size:16px;color:grey;margin-top:0;">{{a[3]}}</p>
+								</li>
+								{% endfor %}
+								{% endif %}
+								<div class="clearfix"></div>
+							</ul>
+						</div>
+
+                <div class="clearfix"></div>
+            </div>
+			<div class="reviews-section">
+
+
+				<div class="clearfix"></div>
+			<div class="clearfix"></div></div>
+			</div>
+		<div class="review-slider">
+			 <ul id="flexiselDemo1">
+			 <li><a href="movie-11"><img src="/static/images/11.jpg"  alt=""/></a></li>
+			<li><a href="movie-12"><img src="/static/images/12.jpg"  alt=""/></a></li>
+			<li><a href="movie-13"><img src="/static/images/13.jpg"  alt=""/></a></li>
+			<li><a href="movie-14"><img src="/static/images/14.jpg"  alt=""/></a></li>
+			<li><a href="movie-15"><img src="/static/images/15.jpg"  alt=""/></a></li>
+			<li><a href="movie-16"><img src="/static/images/16.jpg"  alt=""/></a></li>
+		</ul>
+			<script type="text/javascript">
+		$(window).load(function() {
+
+		  $("#flexiselDemo1").flexisel({
+				visibleItems: 6,
+				animationSpeed: 1000,
+				autoPlay: true,
+				autoPlaySpeed: 3000,
+				pauseOnHover: false,
+				enableResponsiveBreakpoints: true,
+				responsiveBreakpoints: {
+					portrait: {
+						changePoint:480,
+						visibleItems: 2
+					},
+					landscape: {
+						changePoint:640,
+						visibleItems: 3
+					},
+					tablet: {
+						changePoint:768,
+						visibleItems: 3
+					}
+				}
+			});
+			});
+		</script>
+		<script type="text/javascript" src="/static/js/jquery.flexisel.js"></script>
+		</div>
+			<div class="footer">
+		<h6>Contact me </h6>
+		<p class="claim">15307130334@fudan.edu.cn</p>
+		<div class="copyright">
+			<p>Copyright &copy; 2017.Lily Young All rights reserved. </p>
+		</div>
+			</div>
+		</div>
+	<div class="clearfix"></div>
+	</div>
+
+</body>
+</html>

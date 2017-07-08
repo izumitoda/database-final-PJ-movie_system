@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>电影</title>
+<link href="/static/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href="/static/css/styleindex.css" rel="stylesheet" type="text/css" media="all" />
+<script src="/static/js/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--webfont-->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<!-- header-section-starts -->
+	<div class="full">
+			<div class="menu">
+				<ul>
+					<li><a href="index"><div class="hm"><i class="home1"></i><i class="home2"></i></div></a></li>
+					<li><a class="active" href="movie"><div class="video"><i class="videos"></i><i class="videos1"></i></div></a></li>
+					<li><a href="user"><div class="cat"><i class="watching"></i><i class="watching1"></i></div></a></li>
+				</ul>
+			</div>
+		<div class="main">
+		<div class="review-content">
+			<div class="top-header span_top">
+				<div class="logo">
+					<a href="index"><img src="/static/images/logo.png" alt="" /></a>
+					<p>Movie Theater</p>
+				</div>
+				<div class="search v-search">
+					<input id="searchinfo" type="text" value="搜索" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = '搜索';}"/>
+					    <a id="search"  ><input onclick="jump()" type="button" value=""></a>
+					<script>
+	                 function jump()
+	                 {
+						var a=document.getElementById("searchinfo").value;
+						var cc="search-"+a;
+						document.getElementById("search").href=cc;
+     				}
+				</script>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="reviews-section">
+				<h3 class="head">豆瓣电影 TOP 10</h3>
+					<div class="col-md-9 reviews-grids">
+						{% for a in film %}
+						{% if a[0]<11 %}
+						<div class="review">
+							<div class="movie-pic">
+								<a href="movie-{{a[0]}}"><img src="/static/images/{{a[0]}}.jpg" alt="" /></a>
+							</div>
+							<div class="review-info">
+								<a class="span" href="movie-{{a[0]}}">{{a[0]}}.{{a[1]}}</a>
+								<p class="dirctr">
+								{{a[2]}}/{{a[3]}}/{{a[4]}}</p>
+								<br>
+								<p class="info">导演：{{a[7]}}</p>
+								<p class="info">主演：{{a[8]}}</p>
+								<p class="info">类型：{{a[4]}}</p>
+								<br>
+								<p class="ratingview">豆瓣评分:</p>
+								<div class="rating">
+									<span style="backgroundcolor:orangered">★</span>
+									<span>★</span>
+									<span>★</span>
+									<span>★</span>
+									<span>★</span>
+								</div>
+								<p class="ratingview">
+								&nbsp;{{a[6]}}
+								</p>
+								<div class="clearfix"></div>
+								<div class="yrw">
+
+									<div class="clearfix"></div>
+								</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						{% endif %}
+						{% endfor %}
+							<div class="clearfix"></div>
+						</div>
+
+					<div class="col-md-3 side-bar">
+
+				<div class="clearfix"></div>
+					</div>
+
+			<div class="clearfix"></div></div>
+			</div>
+		<div class="review-slider">
+			 <ul id="flexiselDemo1">
+			 <li><a href="movie-11"><img src="/static/images/11.jpg"  alt=""/></a></li>
+			<li><a href="movie-12"><img src="/static/images/12.jpg"  alt=""/></a></li>
+			<li><a href="movie-13"><img src="/static/images/13.jpg"  alt=""/></a></li>
+			<li><a href="movie-14"><img src="/static/images/14.jpg"  alt=""/></a></li>
+			<li><a href="movie-15"><img src="/static/images/15.jpg"  alt=""/></a></li>
+			<li><a href="movie-16"><img src="/static/images/16.jpg"  alt=""/></a></li>
+		</ul>
+			<script type="text/javascript">
+		$(window).load(function() {
+
+		  $("#flexiselDemo1").flexisel({
+				visibleItems: 6,
+				animationSpeed: 1000,
+				autoPlay: true,
+				autoPlaySpeed: 3000,
+				pauseOnHover: false,
+				enableResponsiveBreakpoints: true,
+				responsiveBreakpoints: {
+					portrait: {
+						changePoint:480,
+						visibleItems: 2
+					},
+					landscape: {
+						changePoint:640,
+						visibleItems: 3
+					},
+					tablet: {
+						changePoint:768,
+						visibleItems: 3
+					}
+				}
+			});
+			});
+		</script>
+		<script type="text/javascript" src="/static/js/jquery.flexisel.js"></script>
+		</div>
+			<div class="footer">
+		<h6>Contact me </h6>
+		<p class="claim">15307130334@fudan.edu.cn</p>
+		<div class="copyright">
+			<p>Copyright &copy; 2017.Lily Young All rights reserved. </p>
+		</div>
+			</div>
+		</div>
+	<div class="clearfix"></div>
+	</div>
+
+</body>
+</html>

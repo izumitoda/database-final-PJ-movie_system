@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head><title>注册</title>
+<link href="/static/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href="/static/css/styleindex.css" rel="stylesheet" type="text/css" media="all" />
+<!-- Custom Theme files -->
+<script src="/static/js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Cinema Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--webfont-->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<!-- header-section-starts -->
+	<div class="full">
+			<div class="menu">
+				<ul>
+					<li><a class="active" href="register.html"><div class="cnt"><i class="contact"></i><i class="contact1"></i></div></a></li>
+				</ul>
+			</div>
+		<div class="main">
+		<div class="contact-content">
+			<div class="top-header span_top">
+				<div class="logo">
+					<a href="index"><img src="/static/images/logo.png" alt="" /></a>
+					<p>Movie Theater</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<!---contact-->
+<div class="main-contact">
+	<form action="register" name="form" method="POST">
+		 <h3 class="head">创建一个新账户</h3>
+		 <div class="contact-form">
+			 <form>
+				 <div class="col-md-6 contact-left">
+					  <input style="width:400px;color:grey" type="text" name="contact" value="手机/邮箱"   onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '手机/邮箱';}"/>
+					  <input  style="width:400px;color:grey" type="text" name="user_name" value="用户名"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '用户名';}">
+						 {% for msg in get_flashed_messages() %}
+					 	 {% if msg=="用户名已被占用" %}
+							{{msg}}
+					     {% endif %}
+					     {% endfor %}
+					 <input style="width:400px" type="password"  name="password" placeholder="密码" style="color:grey" onfocus="this.value = '';" >
+					 {% for msg in get_flashed_messages() %}
+					 	 {% if msg=="密码至少6个字符" %}
+							{{msg}}
+					     {% endif %}
+					     {% endfor %}
+					 <div class="submit">
+							<input type="submit" id="submit" value="注册" onclick="submit()">
+					</div>
+				  </div>
+				 <div class="clearfix"></div>
+	     </div>
+		</form>
+</div>
+	<div class="footer">
+		<h6>Contact me </h6>
+		<p class="claim">15307130334@fudan.edu.cn</p>
+		<div class="copyright">
+			<p>Copyright &copy; 2017.Lily Young All rights reserved. </p>
+		</div>
+	</div>
+	</div>
+	<div class="clearfix"></div>
+	</div>
+</body>
+</html>
